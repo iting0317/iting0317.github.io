@@ -189,6 +189,20 @@
               </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/2020/09/22/%E4%BD%BF%E7%94%A8Hexo+Gitpage%E6%9E%B6%E8%A8%AD%E9%83%A8%E8%90%BD%E6%A0%BC%20e87792e53f794e1696590153fd4c6c21/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/09/22/使用Hexo+Gitpage架設部落格 e87792e53f794e1696590153fd4c6c21/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -325,6 +339,13 @@
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -472,6 +493,37 @@
   
 
   
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://timblog-2.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://example.com/2020/09/22/%E4%BD%BF%E7%94%A8Hexo+Gitpage%E6%9E%B6%E8%A8%AD%E9%83%A8%E8%90%BD%E6%A0%BC%20e87792e53f794e1696590153fd4c6c21/";
+    this.page.identifier = "2020/09/22/使用Hexo+Gitpage架設部落格 e87792e53f794e1696590153fd4c6c21/";
+    this.page.title = "使用Hexo+Gitpage架設部落格";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://timblog-2.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
 
 </body>
 </html>
