@@ -20,19 +20,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="簡介將一組結構化查詢語言(Structured Query Language, SQL)語句，將邏輯組成一個程序，接收外部參數，執行後回傳結果。本身是DB的物件，存在於DB當中。">
+  <meta name="description" content="我選擇使用第三方服務「Disqus」 使用方法非常簡單">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Stored Procedure(預存程序)優缺點比較">
-<meta property="og:url" content="http://example.com/2020/09/17/Stored%20Procedure(%E9%A0%90%E5%AD%98%E7%A8%8B%E5%BA%8F)%E5%84%AA%E7%BC%BA%E9%BB%9E%E6%AF%94%E8%BC%83%20974bd35f910b474db337da5a37f3b758%202/index.html">
+<meta property="og:title" content="將hexo部落格，加入留言版功能">
+<meta property="og:url" content="http://example.com/2020/09/24/%E5%B0%87hexo%E9%83%A8%E8%90%BD%E6%A0%BC%EF%BC%8C%E5%8A%A0%E5%85%A5%E7%95%99%E8%A8%80%E7%89%88%E5%8A%9F%E8%83%BD%206e14c138b927439488dd9f8cf6ba0f96/index.html">
 <meta property="og:site_name" content="Tim&#39;s Blog">
-<meta property="og:description" content="簡介將一組結構化查詢語言(Structured Query Language, SQL)語句，將邏輯組成一個程序，接收外部參數，執行後回傳結果。本身是DB的物件，存在於DB當中。">
+<meta property="og:description" content="我選擇使用第三方服務「Disqus」 使用方法非常簡單">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2020-09-17T14:23:00.000Z">
-<meta property="article:modified_time" content="2020-09-24T11:30:52.810Z">
+<meta property="og:image" content="http://example.com/2020/09/24/%E5%B0%87hexo%E9%83%A8%E8%90%BD%E6%A0%BC%EF%BC%8C%E5%8A%A0%E5%85%A5%E7%95%99%E8%A8%80%E7%89%88%E5%8A%9F%E8%83%BD%206e14c138b927439488dd9f8cf6ba0f96/disqus_setting.png">
+<meta property="og:image" content="http://example.com/2020/09/24/%E5%B0%87hexo%E9%83%A8%E8%90%BD%E6%A0%BC%EF%BC%8C%E5%8A%A0%E5%85%A5%E7%95%99%E8%A8%80%E7%89%88%E5%8A%9F%E8%83%BD%206e14c138b927439488dd9f8cf6ba0f96/disqus_complete.png">
+<meta property="article:published_time" content="2020-09-24T07:33:24.000Z">
+<meta property="article:modified_time" content="2020-09-24T15:37:45.223Z">
 <meta property="article:author" content="Tim">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2020/09/24/%E5%B0%87hexo%E9%83%A8%E8%90%BD%E6%A0%BC%EF%BC%8C%E5%8A%A0%E5%85%A5%E7%95%99%E8%A8%80%E7%89%88%E5%8A%9F%E8%83%BD%206e14c138b927439488dd9f8cf6ba0f96/disqus_setting.png">
 
-<link rel="canonical" href="http://example.com/2020/09/17/Stored%20Procedure(%E9%A0%90%E5%AD%98%E7%A8%8B%E5%BA%8F)%E5%84%AA%E7%BC%BA%E9%BB%9E%E6%AF%94%E8%BC%83%20974bd35f910b474db337da5a37f3b758%202/">
+<link rel="canonical" href="http://example.com/2020/09/24/%E5%B0%87hexo%E9%83%A8%E8%90%BD%E6%A0%BC%EF%BC%8C%E5%8A%A0%E5%85%A5%E7%95%99%E8%A8%80%E7%89%88%E5%8A%9F%E8%83%BD%206e14c138b927439488dd9f8cf6ba0f96/">
 
 
 <script id="page-configurations">
@@ -45,7 +48,7 @@
   };
 </script>
 
-  <title>Stored Procedure(預存程序)優缺點比較 | Tim's Blog</title>
+  <title>將hexo部落格，加入留言版功能 | Tim's Blog</title>
   
 
 
@@ -151,7 +154,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/17/Stored%20Procedure(%E9%A0%90%E5%AD%98%E7%A8%8B%E5%BA%8F)%E5%84%AA%E7%BC%BA%E9%BB%9E%E6%AF%94%E8%BC%83%20974bd35f910b474db337da5a37f3b758%202/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/24/%E5%B0%87hexo%E9%83%A8%E8%90%BD%E6%A0%BC%EF%BC%8C%E5%8A%A0%E5%85%A5%E7%95%99%E8%A8%80%E7%89%88%E5%8A%9F%E8%83%BD%206e14c138b927439488dd9f8cf6ba0f96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -164,7 +167,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Stored Procedure(預存程序)優缺點比較
+          將hexo部落格，加入留言版功能
         </h1>
 
         <div class="post-meta">
@@ -173,16 +176,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">發表於</span>
+              
 
-              <time title="創建時間：2020-09-17 22:23:00" itemprop="dateCreated datePublished" datetime="2020-09-17T22:23:00+08:00">2020-09-17</time>
+              <time title="創建時間：2020-09-24 15:33:24 / 修改時間：23:37:45" itemprop="dateCreated datePublished" datetime="2020-09-24T15:33:24+08:00">2020-09-24</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2020-09-24 19:30:52" itemprop="dateModified" datetime="2020-09-24T19:30:52+08:00">2020-09-24</time>
-              </span>
 
           
   
@@ -193,8 +190,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2020/09/17/Stored%20Procedure(%E9%A0%90%E5%AD%98%E7%A8%8B%E5%BA%8F)%E5%84%AA%E7%BC%BA%E9%BB%9E%E6%AF%94%E8%BC%83%20974bd35f910b474db337da5a37f3b758%202/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/09/17/Stored Procedure(預存程序)優缺點比較 974bd35f910b474db337da5a37f3b758 2/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2020/09/24/%E5%B0%87hexo%E9%83%A8%E8%90%BD%E6%A0%BC%EF%BC%8C%E5%8A%A0%E5%85%A5%E7%95%99%E8%A8%80%E7%89%88%E5%8A%9F%E8%83%BD%206e14c138b927439488dd9f8cf6ba0f96/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/09/24/將hexo部落格，加入留言版功能 6e14c138b927439488dd9f8cf6ba0f96/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -209,58 +206,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h1><p>將一組結構化查詢語言(Structured Query Language, SQL)語句，將邏輯組成一個程序，接收外部參數，執行後回傳結果。本身是DB的物件，存在於DB當中。</p>
+        <p>我選擇使用第三方服務「<a target="_blank" rel="noopener" href="https://disqus.com/">Disqus</a>」</p>
+<p>使用方法非常簡單</p>
 <a id="more"></a>
-<p>直接套用<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver15">MSDN</a>上的說明</p>
-<blockquote>
-<p>SQL Server 的預存程序是一或多個 Transact-SQL 陳述式的群組，或 Microsoft .NET Framework Common Language Runtime (CLR) 方法的參考。 預存程序類似於其他程式設計語言中的建構，因為這些程序可以：</p>
-</blockquote>
-<blockquote>
-<p>接受輸入參數，並以輸出參數的形式將多個數值傳回呼叫程式。</p>
-</blockquote>
-<blockquote>
-<p>包含可在資料庫中執行作業的程式陳述式。 這些功能包括呼叫其他程序。</p>
-</blockquote>
-<blockquote>
-<p>將狀態值傳回呼叫程式，以指示成功或失敗 (及失敗原因)。</p>
-</blockquote>
-<h3 id="優點"><a href="#優點" class="headerlink" title="優點"></a>優點</h3><ol>
-<li><p>封裝</p>
-<p> 隱藏商業邏輯，增加隱蔽性跟安全性，外部無法(也不需要)得知實作細節也不能修改，只需要傳入正確的參數就能使用</p>
-</li>
-<li><p>安全性</p>
-<ul>
-<li><p>寫成參數化，再利用sp_executesql執行，可以防止SQL injection。</p>
-<p>「Parameterized Query + Prepare Statement 兩者缺一不可」</p>
-<p>參考：<a target="_blank" rel="noopener" href="https://www.qa-knowhow.com/?p=4242">SQL injection 幾種無效的防護程式範例迷思</a></p>
-</li>
-<li><p>可以限制連線帳戶的存取權限，特定user才能存取該SP。(相較於只能限制table存取權限)</p>
-</li>
+
+<h1 id="申請Disqus帳號與建立留言板"><a href="#申請Disqus帳號與建立留言板" class="headerlink" title="申請Disqus帳號與建立留言板"></a>申請Disqus帳號與建立留言板</h1><ol>
+<li>註冊Disqus帳號</li>
+<li>登入後，點擊首頁的「GET STARTED」</li>
+<li>選擇「I want to install Disqus on my site」</li>
+<li>需要輸入的欄位<ul>
+<li>Website Name：自訂 short name，且是唯一，在設定 Hexo 時需要使用。</li>
+<li>Category：類別，自選，我選Tech。</li>
+<li>Language：語言，自行選擇，我選Chinese。</li>
 </ul>
 </li>
-<li><p>效能快</p>
-<ul>
-<li>因為是已經編譯過的，不必每次都編譯&amp;檢查語法正確性。</li>
-<li>執行一次之後就會載入到DB server的memory當中，下次有人呼叫就會從cache中取用。直到被呼叫次數過低或是記憶體不足才會被清出去。</li>
-</ul>
-</li>
-<li><p>共用性</p>
-<p> 各個不同的client(應用程式)，不必重寫邏輯，只需要呼叫DB server上的SP就可以，不用重造輪子。</p>
-</li>
-<li><p>降低網路流量、降低DB跟client連線次數</p>
-<p> 可以把相關的多個商業邏輯或是語法寫在同一支SP，如此一來client只需要呼叫一次就可以完成任務，而不需要多次呼叫，分別取得資料後再加以處理，減少溝通次數。</p>
-</li>
+<li>填寫後點擊「Create Site」</li>
+<li>到 Settings 的地方，將部落格網址加入到 Website URL</li>
 </ol>
-<h3 id="缺點"><a href="#缺點" class="headerlink" title="缺點"></a>缺點</h3><ol>
-<li>移植性差，一定要寫在DB中，且不同平台跟廠商支援度不同。</li>
-<li>存放位置與程式(應用層)不同，對於管理與自動化較不便。</li>
+<h1 id="設定Hexo"><a href="#設定Hexo" class="headerlink" title="設定Hexo"></a>設定Hexo</h1><ol>
+<li>到部落格themes目錄之下的 <code>_config.yml</code> 檔案(我使用的theme是<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">Next</a>)，修改 <code>disqus</code> 區段的設定。</li>
 </ol>
+<p><img src="/2020/09/24/%E5%B0%87hexo%E9%83%A8%E8%90%BD%E6%A0%BC%EF%BC%8C%E5%8A%A0%E5%85%A5%E7%95%99%E8%A8%80%E7%89%88%E5%8A%9F%E8%83%BD%206e14c138b927439488dd9f8cf6ba0f96/disqus_setting.png" alt="%E5%B0%87hexo%E9%83%A8%E8%90%BD%E6%A0%BC%EF%BC%8C%E5%8A%A0%E5%85%A5%E7%95%99%E8%A8%80%E7%89%88%E5%8A%9F%E8%83%BD%206e14c138b927439488dd9f8cf6ba0f96/disqus_setting.png"></p>
+<h1 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h1><p>此時會看到部落格文章已經加入留言板的功能。</p>
+<p><img src="/2020/09/24/%E5%B0%87hexo%E9%83%A8%E8%90%BD%E6%A0%BC%EF%BC%8C%E5%8A%A0%E5%85%A5%E7%95%99%E8%A8%80%E7%89%88%E5%8A%9F%E8%83%BD%206e14c138b927439488dd9f8cf6ba0f96/disqus_complete.png" alt="%E5%B0%87hexo%E9%83%A8%E8%90%BD%E6%A0%BC%EF%BC%8C%E5%8A%A0%E5%85%A5%E7%95%99%E8%A8%80%E7%89%88%E5%8A%9F%E8%83%BD%206e14c138b927439488dd9f8cf6ba0f96/disqus_complete.png"></p>
 <hr>
-<p>綜合上述優缺點來看，像是金融單位，許多應用服務都需要底層的金流，就很適合寫成SP。</p>
-<ol>
-<li>可避免應用端知道運作邏輯，只可以呼叫執行。</li>
-<li>經常被呼叫執行，從cache效能快。</li>
-<li>不同的應用端，不需要自己重寫一次邏輯。</li>
+<h1 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10208619">部落格第三方服務介紹</a></li>
 </ol>
 
     </div>
@@ -277,13 +248,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/09/18/%E5%B0%88%E6%A1%88Appsetting(web%20config)%E7%9A%84%E9%81%8B%E4%BD%9C%E6%A9%9F%E5%88%B6%20d4a8b7bb898c4ce9aba3401daa1f3889/" rel="prev" title="C#專案Appsetting(web config)的運作機制">
-      <i class="fa fa-chevron-left"></i> C#專案Appsetting(web config)的運作機制
+    <a href="/2020/09/22/%E4%BD%BF%E7%94%A8Hexo+Gitpage%E6%9E%B6%E8%A8%AD%E9%83%A8%E8%90%BD%E6%A0%BC%20e87792e53f794e1696590153fd4c6c21/" rel="prev" title="使用Hexo+Gitpage架設部落格">
+      <i class="fa fa-chevron-left"></i> 使用Hexo+Gitpage架設部落格
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/09/22/SOAP%E8%88%87RESTful%E7%9A%84%E5%B7%AE%E7%95%B0%20858cc5e371d9426ebb248c52bb8034d1/" rel="next" title="SOAP與RESTful的差異">
-      SOAP與RESTful的差異 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -349,7 +317,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B0%A1%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">簡介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%84%AA%E9%BB%9E"><span class="nav-number">1.0.1.</span> <span class="nav-text">優點</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%BA%E9%BB%9E"><span class="nav-number">1.0.2.</span> <span class="nav-text">缺點</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%B3%E8%AB%8BDisqus%E5%B8%B3%E8%99%9F%E8%88%87%E5%BB%BA%E7%AB%8B%E7%95%99%E8%A8%80%E6%9D%BF"><span class="nav-number">1.</span> <span class="nav-text">申請Disqus帳號與建立留言板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A8%AD%E5%AE%9AHexo"><span class="nav-number">2.</span> <span class="nav-text">設定Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%8C%E6%88%90"><span class="nav-number">3.</span> <span class="nav-text">完成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%83%E8%80%83"><span class="nav-number">4.</span> <span class="nav-text">參考</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -463,9 +431,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "http://example.com/2020/09/17/Stored%20Procedure(%E9%A0%90%E5%AD%98%E7%A8%8B%E5%BA%8F)%E5%84%AA%E7%BC%BA%E9%BB%9E%E6%AF%94%E8%BC%83%20974bd35f910b474db337da5a37f3b758%202/";
-    this.page.identifier = "2020/09/17/Stored Procedure(預存程序)優缺點比較 974bd35f910b474db337da5a37f3b758 2/";
-    this.page.title = "Stored Procedure(預存程序)優缺點比較";
+    this.page.url = "http://example.com/2020/09/24/%E5%B0%87hexo%E9%83%A8%E8%90%BD%E6%A0%BC%EF%BC%8C%E5%8A%A0%E5%85%A5%E7%95%99%E8%A8%80%E7%89%88%E5%8A%9F%E8%83%BD%206e14c138b927439488dd9f8cf6ba0f96/";
+    this.page.identifier = "2020/09/24/將hexo部落格，加入留言版功能 6e14c138b927439488dd9f8cf6ba0f96/";
+    this.page.title = "將hexo部落格，加入留言版功能";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
