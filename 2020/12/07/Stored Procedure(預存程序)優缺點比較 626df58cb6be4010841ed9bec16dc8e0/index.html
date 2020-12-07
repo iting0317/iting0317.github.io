@@ -20,16 +20,16 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Stored Procedure簡介將一組結構化查詢語言(Structured Query Language, SQL)語句，將邏輯組成一個程序，接收外部參數，執行後回傳結果。本身是DB的物件，存在於DB當中。 直接套用MSDN上的說明  SQL Server 的預存程序是一或多個 Transact-SQL 陳述式的群組，或 Microsoft .NET Framework Common Lan">
+  <meta name="description" content="Stored Procedure簡介將一組結構化查詢語言(Structured Query Language, SQL)語句，將邏輯組成一個程序，接收外部參數，執行後回傳結果。本身是DB的物件，存在於DB當中。 直接套用MSDN上的說明">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Stored Procedure(預存程序)優缺點比較">
 <meta property="og:url" content="http://example.com/2020/12/07/Stored%20Procedure(%E9%A0%90%E5%AD%98%E7%A8%8B%E5%BA%8F)%E5%84%AA%E7%BC%BA%E9%BB%9E%E6%AF%94%E8%BC%83%20626df58cb6be4010841ed9bec16dc8e0/index.html">
 <meta property="og:site_name" content="Tim&#39;s Blog">
-<meta property="og:description" content="Stored Procedure簡介將一組結構化查詢語言(Structured Query Language, SQL)語句，將邏輯組成一個程序，接收外部參數，執行後回傳結果。本身是DB的物件，存在於DB當中。 直接套用MSDN上的說明  SQL Server 的預存程序是一或多個 Transact-SQL 陳述式的群組，或 Microsoft .NET Framework Common Lan">
+<meta property="og:description" content="Stored Procedure簡介將一組結構化查詢語言(Structured Query Language, SQL)語句，將邏輯組成一個程序，接收外部參數，執行後回傳結果。本身是DB的物件，存在於DB當中。 直接套用MSDN上的說明">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="http://example.com/2020/12/07/Stored%20Procedure(%E9%A0%90%E5%AD%98%E7%A8%8B%E5%BA%8F)%E5%84%AA%E7%BC%BA%E9%BB%9E%E6%AF%94%E8%BC%83%20626df58cb6be4010841ed9bec16dc8e0/Untitled.png">
 <meta property="article:published_time" content="2020-12-07T07:14:52.000Z">
-<meta property="article:modified_time" content="2020-12-07T15:18:47.117Z">
+<meta property="article:modified_time" content="2020-12-07T15:24:49.737Z">
 <meta property="article:author" content="Tim">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2020/12/07/Stored%20Procedure(%E9%A0%90%E5%AD%98%E7%A8%8B%E5%BA%8F)%E5%84%AA%E7%BC%BA%E9%BB%9E%E6%AF%94%E8%BC%83%20626df58cb6be4010841ed9bec16dc8e0/Untitled.png">
@@ -177,7 +177,7 @@
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2020-12-07 15:14:52 / 修改時間：23:18:47" itemprop="dateCreated datePublished" datetime="2020-12-07T15:14:52+08:00">2020-12-07</time>
+              <time title="創建時間：2020-12-07 15:14:52 / 修改時間：23:24:49" itemprop="dateCreated datePublished" datetime="2020-12-07T15:14:52+08:00">2020-12-07</time>
             </span>
 
           
@@ -205,9 +205,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <a id="more"></a>
-<h1 id="Stored-Procedure簡介"><a href="#Stored-Procedure簡介" class="headerlink" title="Stored Procedure簡介"></a>Stored Procedure簡介</h1><p>將一組結構化查詢語言(Structured Query Language, SQL)語句，將邏輯組成一個程序，接收外部參數，執行後回傳結果。本身是DB的物件，存在於DB當中。</p>
+        <h1 id="Stored-Procedure簡介"><a href="#Stored-Procedure簡介" class="headerlink" title="Stored Procedure簡介"></a>Stored Procedure簡介</h1><p>將一組結構化查詢語言(Structured Query Language, SQL)語句，將邏輯組成一個程序，接收外部參數，執行後回傳結果。本身是DB的物件，存在於DB當中。</p>
 <p>直接套用<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver15">MSDN</a>上的說明</p>
+<a id="more"></a>
 <blockquote>
 <p>SQL Server 的預存程序是一或多個 Transact-SQL 陳述式的群組，或 Microsoft .NET Framework Common Language Runtime (CLR) 方法的參考。 預存程序類似於其他程式設計語言中的建構，因為這些程序可以：</p>
 </blockquote>
@@ -288,8 +288,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/12/07/Stored%20Procedure(%E9%A0%90%E5%AD%98%E7%A8%8B%E5%BA%8F)%E5%84%AA%E7%BC%BA%E9%BB%9E%E6%AF%94%E8%BC%83%20626df58cb6be4010841ed9bec16dc8e0/%E6%8A%8A%E9%82%8F%E8%BC%AF%E5%AF%AB%E5%9C%A8Stored%20Procedure(SP)%E7%9A%84%E5%84%AA%E7%BC%BA%E9%BB%9E%20db8f49488c164748a72a66dc7679d015/" rel="prev" title="">
-      <i class="fa fa-chevron-left"></i> 
+    <a href="/2020/11/16/Net%20MVC%20%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F%206836e2c3bb6c4e508f974c76a9d5159a/" rel="prev" title=".Net MVC 生命週期">
+      <i class="fa fa-chevron-left"></i> .Net MVC 生命週期
     </a></div>
       <div class="post-nav-item"></div>
     </div>
@@ -371,7 +371,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
